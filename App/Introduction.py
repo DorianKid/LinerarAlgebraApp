@@ -30,7 +30,7 @@ st.markdown(
 
     Cada unidad te proporcionará las herramientas necesarias para desarrollar tu pensamiento lógico-matemático y aplicar estos conceptos en diversos ámbitos de la física y las matemáticas.
     ### ¿Cómo usar esta plataforma?
-    Pracphy está diseñada para complementar tus clases presenciales. Aquí encontrarás:
+    *Pracphy* está diseñada para complementar tus clases presenciales. Aquí encontrarás:
 
     - **Resúmenes teóricos de cada unidad**
     - **Ejercicios prácticos con soluciones paso a paso**
@@ -40,6 +40,7 @@ st.markdown(
     
     Nuestro objetivo es ayudarte a desarrollar las competencias necesarias para comprender y aplicar los métodos del Álgebra Lineal en tu carrera universitaria.
     
-    ¡Descubre cómo estas herramientas matemáticas pueden ayudarte a entender mejor el universo que nos rodea pero hasta que hayas entendido esto! 
+    ¡Descubre cómo estas herramientas matemáticas pueden ayudarte a entender mejor el universo que nos rodea pero hasta que hayas entendido todo eso! 
+    
 """
 )

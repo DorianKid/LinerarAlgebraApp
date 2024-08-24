@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Linear Transformations",
+    page_title="Transformaciones Lineales",
     page_icon="🪄",
 )
 

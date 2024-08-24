@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Diagonalization",
+    page_title="Diagonalizacion",
     page_icon="🧹",
 )
 

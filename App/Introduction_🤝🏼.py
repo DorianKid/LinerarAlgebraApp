@@ -2,10 +2,10 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Introduction",
-    page_icon="👋",
+    page_icon="🤝🏼",
 )
 
-st.write("# Welcome to Streamlit! 👋")
+st.write("# ¡Bienvenido! 🤝🏼")
 
 st.markdown(
     """

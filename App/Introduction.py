@@ -15,9 +15,9 @@ st.write("# ¡Bienvenido! 🤝🏼")
 
 st.markdown(
     """
-    #### ¡Bienvenido a Pracphy, tu plataforma de estudio y práctica para la licenciatura en Física en la Universidad de Guadalajara!
+    #### ¡Bienvenido a *Pracphy*, tu plataforma de estudio y práctica para la licenciatura en Física en la Universidad de Guadalajara!
     ### ¿Qué es Álgebra Lineal I?
-    #### Álgebra Lineal I es una unidad de aprendizaje fundamental para la carrera. Este curso te introducirá a conceptos clave como: Vectores, Independencia Lineal, Matriz Escalonada, Eigenvalues y mucho más. Estos conocimientos son esenciales para comprender y modelar una amplia gama de fenómenos físicos y matemáticos.
+    Álgebra Lineal I es una unidad de aprendizaje fundamental para la carrera. Este curso te introducirá a conceptos clave como: Vectores, Independencia Lineal, Matriz Escalonada, Eigenvalues y mucho más. Estos conocimientos son esenciales para comprender y modelar una amplia gama de fenómenos físicos y matemáticos.
     ## ¿Qué aprenderás?
     #### A lo largo de esta página web, explorarás seis unidades temáticas principales:
 
@@ -32,11 +32,11 @@ st.markdown(
     ### ¿Cómo usar esta plataforma?
     Pracphy está diseñada para complementar tus clases presenciales. Aquí encontrarás:
 
-    - Resúmenes teóricos de cada unidad
-    - Ejercicios prácticos con soluciones paso a paso
-    - Colección de videos explicativos
-    - Descarga de ejercicios prácticos
-    - Recursos adicionales para profundizar en los temas
+    - **Resúmenes teóricos de cada unidad**
+    - **Ejercicios prácticos con soluciones paso a paso**
+    - **Colección de videos explicativos**
+    - **Descarga de ejercicios prácticos**
+    - **Recursos adicionales para profundizar en los temas**
     
     Nuestro objetivo es ayudarte a desarrollar las competencias necesarias para comprender y aplicar los métodos del Álgebra Lineal en tu carrera universitaria.
     

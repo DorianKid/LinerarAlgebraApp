@@ -17,13 +17,7 @@ st.markdown(
     """
     #### ¡Bienvenido a *Pracphy*, tu plataforma de estudio y práctica para la licenciatura en Física en la Universidad de Guadalajara!
     ### ¿Qué es Álgebra Lineal I?
-    #### Álgebra Lineal I es una unidad de aprendizaje fundamental para la carrera. Este curso te introducirá a conceptos clave como: 
-    - Vectores
-    - Independencia Lineal
-    - Matriz Escalonada
-    - Eigenvalues
-    
-    Estos conocimientos son esenciales para comprender y modelar una amplia gama de fenómenos físicos y matemáticos.**
+    #### Álgebra Lineal I es una unidad de aprendizaje fundamental para la carrera. Este curso te introducirá a conceptos clave como: Vectores, Independencia Lineal, Eigenvectors, Eigenvalues y mucho más. Estos conocimientos son esenciales para comprender y modelar una amplia gama de fenómenos físicos y matemáticos.
     ## ¿Qué aprenderás?
     #### A lo largo de esta página web, explorarás seis unidades temáticas principales:
 

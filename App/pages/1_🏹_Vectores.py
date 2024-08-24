@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Vectors",
+    page_title="Vectores",
     page_icon="🏹",
 )
 

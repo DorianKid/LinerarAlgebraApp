@@ -28,11 +28,11 @@ if st.session_state.page == 'generate':
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
 ''')
     st.latex('''
-\begin{bmatrix}
+\\begin{bmatrix}
    a \\
    b \\
    c
-\end{bmatrix}
+\\end{bmatrix}
 ''')
 
     # Matrix's elements 

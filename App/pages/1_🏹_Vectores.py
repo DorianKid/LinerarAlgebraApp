@@ -29,9 +29,11 @@ if st.session_state.page == 'generate':
 ''')
     st.latex('''
 \\begin{bmatrix}
-   a \\\\
-   b \\\\
-   c
+   x_{0} \\\\
+   x_{1} \\\\
+   x_{2} \\\\
+   \\vdots \\\\
+   x_{n}
 \\end{bmatrix}
 ''')
 

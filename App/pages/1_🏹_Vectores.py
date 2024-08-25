@@ -29,8 +29,8 @@ if st.session_state.page == 'generate':
 ''')
     st.latex('''
 \\begin{bmatrix}
-   a \\
-   b \\
+   a \\\\
+   b \\\\
    c
 \\end{bmatrix}
 ''')

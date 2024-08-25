@@ -29,9 +29,7 @@ if st.session_state.page == 'generate':
 ''')
     st.latex('''
 \\begin{equation}
-\\begin{bmatrix}
-   x_{0}, x_{1}, x_{2}, \\dots, x_{n}
-\\end{bmatrix}
+   (x_{0}, x_{1}, x_{2}, \\dots, x_{n})
 \\end{equation}
 ''')
 
@@ -40,13 +38,13 @@ if st.session_state.page == 'generate':
 ''')
     st.latex('''
 \\begin{equation}
-\\begin{bmatrix}
+\\begin{pmatrix}
    x_{0} \\\\
    x_{1} \\\\
    x_{2} \\\\
    \\vdots \\\\
    x_{n}
-\\end{bmatrix}
+\\end{pmatrix}
 \\end{equation}
 ''')
 

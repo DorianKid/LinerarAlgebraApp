@@ -26,15 +26,14 @@ if st.session_state.page == 'generate':
     st.subheader("Vector Columna y Vector Renglón")
     st.markdown('''
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
-
-$\\begin{bmatrix}
-   a \\\\
-   b \\\\
+''')
+    st.latex('''
+\begin{bmatrix}
+   a \\
+   b \\
    c
-\\end{bmatrix}$
-
-Grossman, S. (2012). *Álgebra Lineal*. (7$^{\\textrm{ma}}$ ed., pp. 48) McGraw Hill. 
-    ''')
+\end{bmatrix}
+''')
 
     # Matrix's elements 
     st.subheader("Elements of the Matrix")

@@ -28,10 +28,11 @@ if st.session_state.page == 'generate':
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
 
 $\\begin{bmatrix}
-   a \\
-   b \\
+   a \\\\
+   b \\\\
    c
 \\end{bmatrix}$
+
 Grossman, S. (2012). *Álgebra Lineal*. (7$^{\\textrm{ma}}$ ed., pp. 48) McGraw Hill. 
     ''')
 

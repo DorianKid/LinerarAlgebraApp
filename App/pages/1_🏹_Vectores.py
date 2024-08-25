@@ -11,6 +11,10 @@ st.set_page_config(
         'About': "Todo bien, ¡suerte!"}
 )
 
+# Inicializar el estado de la sesión si no existe
+if 'page' not in st.session_state:
+    st.session_state.page = 'generate'
+    
 if st.session_state.page == 'generate':
     st.title("Vectores")
     st.header("Definiciones")

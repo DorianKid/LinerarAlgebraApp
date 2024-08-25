@@ -3,8 +3,7 @@ import streamlit as st
 st.set_page_config(
     page_title="Vectores",
     page_icon="🏹",  
-    initial_sidebar_state="expanded
-    ",
+    initial_sidebar_state="expanded",
     layout="wide",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',

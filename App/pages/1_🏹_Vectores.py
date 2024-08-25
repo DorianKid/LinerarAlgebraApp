@@ -28,6 +28,7 @@ if st.session_state.page == 'generate':
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
 ''')
     st.latex('''
+\\begin{equation}
 \\begin{bmatrix}
    x_{0} \\\\
    x_{1} \\\\
@@ -35,6 +36,7 @@ if st.session_state.page == 'generate':
    \\vdots \\\\
    x_{n}
 \\end{bmatrix}
+\\end{equation}
 ''')
 
     # Matrix's elements 

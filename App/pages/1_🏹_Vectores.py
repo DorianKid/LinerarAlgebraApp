@@ -18,11 +18,16 @@ if 'page' not in st.session_state:
 if st.session_state.page == 'generate':
     st.title("Vectores")
     st.header("Definiciones")
-
-    ### OTRAS REFERENCIAS 
-    # Kurosch, A. G. (1968). *Curso de álgebra superior*. Moscow: Mir Publishers (Издательство "Мир")
-
-    # Matrix's order 
+    st.subheader("Sistemas de Coordenadas")
+    st.markdown('''
+**Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
+''')
+    st.latex('''
+\\begin{equation}
+   (x_{0}, x_{1}, x_{2}, \\dots, x_{n})
+\\end{equation}
+''')
+    # VECTOR COLUMNA Y VECTOR RENGLON
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:

@@ -26,7 +26,7 @@ def recta(largo_recta, ubicaciones_puntos):
     
     # Agregar un punto en la posición deseada
     for punto in ubiaciones_puntos:
-    ax.plot(ubicaciones_puntos[0], ubicaciones_puntos[1], 'ko', markersize=7, zorder=3)
+        ax.plot(punto, 0, 'ko', markersize=7, zorder=3)
     
     # Flechas
     ax.annotate("", xy=(largo_recta + 0.5, 0), xytext=(largo_recta + 0.4, 0), arrowprops=dict(color='#C83C2C', linewidth=2, headlength=10, headwidth=8))
@@ -67,7 +67,7 @@ El orden en que se escriben las coordenadas es significativo y a veces se las id
 Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos A(5), B(3), C(-3), D(-5), etc. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 
 ''')
-    st.pyplot(fig)
+    st.pyplot(recta(8, [0,-1,3,-5,7]))
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

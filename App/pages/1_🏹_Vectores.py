@@ -20,7 +20,8 @@ if st.session_state.page == 'generate':
     st.header("Definiciones")
     st.subheader("Sistemas de Coordenadas")
     st.markdown('''
-**Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
+**Definición**: Un sistema de coordenadas es un :blue[sistema de referencia] que utiliza uno o más números (coordenadas) para determinar unívocamente la posición de un punto u objeto geométrico. 
+El orden en que se escriben las coordenadas es significativo y a veces se las identifica por su posición en una tupla ordenada $($x=1,y=2,z=3)$; también se las puede representar con letras, como por ejemplo «la coordenada-x».
 ''')
     st.latex('''
 \\begin{equation}

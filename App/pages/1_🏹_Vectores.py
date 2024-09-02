@@ -37,7 +37,7 @@ def recta(largo_recta, ubicaciones_puntos):
     ax.set_ylim(-0.5, 0.5)
     plt.close()
 
-    return fig
+    return figura
 
 st.set_page_config(
     page_title="Vectores",
@@ -67,7 +67,8 @@ El orden en que se escriben las coordenadas es significativo y a veces se las id
 Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos A(5), B(3), C(-3), D(-5), etc. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 
 ''')
-    st.pyplot(recta(8, [0,-1,3,-5,7]))
+    figura_recta = recta(8, [0,-1,3,-5,7])
+    st.pyplot(fig= figura_recta)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

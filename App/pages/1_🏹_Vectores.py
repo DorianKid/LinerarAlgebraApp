@@ -22,12 +22,11 @@ if st.session_state.page == 'generate':
     st.markdown('''
 **Definición**: Un sistema de coordenadas es un :blue[sistema de referencia] que utiliza uno o más números (coordenadas) para determinar unívocamente la posición de un punto u objeto geométrico. 
 El orden en que se escriben las coordenadas es significativo y a veces se las identifica por su posición en una tupla ordenada (0,0,0); también se las puede representar con letras, como por ejemplo «la coordenada-x». [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
+
+
+
 ''')
-    st.latex('''
-\\begin{equation}
-   (x_{0}, x_{1}, x_{2}, \\dots, x_{n})
-\\end{equation}
-''')
+
     # VECTOR COLUMNA Y VECTOR RENGLON
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

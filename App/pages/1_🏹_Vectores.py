@@ -18,11 +18,11 @@ def recta(largo_recta, ubicaciones_puntos):
     
     # Dibujar las líneas verticales (ticks)
     for i in range(-largo_recta, largo_recta + 1):
-    ax.axvline(i, ymin=0.35, ymax=0.65, color='#C83C2C', linewidth=2, zorder=1)
+        ax.axvline(i, ymin=0.35, ymax=0.65, color='#C83C2C', linewidth=2, zorder=1)
     
     # Agregar etiquetas numéricas
     for i in range(-largo_recta, largo_recta + 1):
-    ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=12)
+        ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=12)
     
     # Agregar un punto en la posición deseada
     for punto in ubiaciones_puntos:

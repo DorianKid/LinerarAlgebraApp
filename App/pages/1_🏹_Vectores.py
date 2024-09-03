@@ -6,7 +6,6 @@ def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
     figura = plt.figure(figsize=(largo_recta*1.5, 1.5))
     
-    
     # Crear el lienzo 
     ax = plt.axes()
     
@@ -59,8 +58,8 @@ if st.session_state.page == 'generate':
     st.header("Definiciones")
     st.subheader("Sistemas de Coordenadas")
 
-    ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
     largo = random.randint(5, 9)
+    ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
     while len(ubicaciones) != 4: 
         ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
         

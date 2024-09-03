@@ -72,8 +72,7 @@ $(0,0,0)$; también se las puede representar con letras, como por ejemplo «la c
 #### Diferentes Sistemas de Coordenadas
 ##### Recta Real
 Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo: 
-
-los puntos **A({ubicaciones[0]})**, **B({ubicaciones[1]})**, **C({ubicaciones[2]})**, **D({ubicaciones[3]})**. 
+**A({ubicaciones[0]})**, **B({ubicaciones[1]})**, **C({ubicaciones[2]})**, **D({ubicaciones[3]})**. 
 ''')
 
     ubicaciones = {"A":ubicaciones[0], "B":ubicaciones[1], "C":ubicaciones[2], "D":ubicaciones[3]}

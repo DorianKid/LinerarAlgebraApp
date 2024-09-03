@@ -80,26 +80,19 @@ Para representar un número de la recta real se emplean las letras mayúsculas y
     st.pyplot(fig= figura_recta, use_container_width=True)
 
     st.markdown(f'''
-##### Sistema de Coordenadas Rectangular (Cartesianas 2-D 
+##### Sistema de Coordenadas Rectangular (Cartesianas 2-D) 
 Un sistema de coordenadas rectangular se define por dos ejes ortogonales (perpendiculares*), también conocido como sistema de coordenadas cartesianas en 2-D, 
 que se intersectan en un punto llamado origen. 
 
-Características principales:
+**Características principales**:
 * Eje horizontal: Comúnmente llamado eje de abscisas o eje X.
 * Eje vertical: Conocido como eje de ordenadas o eje Y.
 * Perpendicularidad: Los ejes X e Y son perpendiculares entre sí, formando un ángulo recto (90 grados) en el punto de intersección.
 * Origen: El punto donde los ejes se cruzan se denomina origen y se representa como (0, 0).
 * Escala: Ambos ejes están igualmente escalados, lo que significa que una unidad en el eje X representa la misma distancia que una unidad en el eje Y.
-* Cuadrantes: El plano se divide en cuatro cuadrantes, numerados en sentido antihorario:
-
-+ Cuadrante I: $x > 0, y > 0$
-+ Cuadrante II: $x < 0, y > 0$
-+ Cuadrante III: $x < 0, y < 0$
-+ Cuadrante IV: $x > 0, y < 0$
-
 * Coordenadas: La posición de cualquier punto en el plano se puede describir mediante un par ordenado $(x, y)$.
 
-*Sólo son sinónimos en el espacio euclídeo.
+**Sólo son sinónimos en el espacio euclídeo*.
 ''')
     
     st.subheader("Vector Renglón y Vector Columna")

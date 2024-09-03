@@ -194,16 +194,12 @@ En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadran
         pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]
     pares = {f"{pares[0]}":pares[0], f"{pares[1]}":pares[1], f"{pares[2]}":pares[2]}
     figura_2D = cuadricula(largo_2D, pares)
-    figura_quad = cuadricula_cuadrantes(largo_2D)
     
     # Crear una columna central
-    col1, col2 = st.columns([2, 2])
-    
-    with col1:  # Usar la columna central para el contenido
-        st.pyplot(fig= figura_2D, use_container_width=True)
+    col1, col2, col3 = st.columns([1, 2, 1])
         
     with col2:  # Usar la columna central para el contenido
-        st.pyplot(fig= figura_quad, use_container_width=True)
+        st.pyplot(fig= figura_2D, use_container_width=True)
 
     st.markdown('''
 ##### Sistema de Coordenadas Cartesianas (3-D)

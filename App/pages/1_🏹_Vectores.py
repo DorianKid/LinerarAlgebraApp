@@ -23,9 +23,10 @@ def recta(largo_recta, ubicaciones_puntos):
     for i in range(-largo_recta, largo_recta + 1):
         ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=12)
     
-    # Agregar un punto en la posición deseada
-    for punto in ubicaciones_puntos:
+    # Agregar un puntos en las posiciones deseadas
+    for letra, punto in ubicaciones_puntos.items():
         ax.plot(punto, 0, 'ko', markersize=7, zorder=3)
+        ax.text(punto, 0.3, letra, ha='center', va='top', fontweight='bold', fontsize=12)
     
     # Flechas
     ax.annotate("", xy=(largo_recta + 0.5, 0), xytext=(largo_recta + 0.4, 0), arrowprops=dict(color='#C83C2C', linewidth=2, headlength=10, headwidth=8))
@@ -74,6 +75,7 @@ Para representar un número de la recta real se emplean las letras mayúsculas y
 *B({ubicaciones[1]})*, *C({ubicaciones[2]})*, *D({ubicaciones[3]})*. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 ''')
 
+    ubicaciones = {"A":ubicaciones[0], "B":ubicaciones[1], "C":ubicaciones[2], "D":ubicaciones[3]}
     figura_recta = recta(largo, ubicaciones)
     st.pyplot(fig= figura_recta, use_container_width=True)
     

@@ -101,11 +101,11 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     for letra, (x, y)  in pares_ordenados.items():
         ax.plot(x, y, 'ko', markersize=7, zorder=3)
         if x == 0:
-            ax.text(x + .5, y, letra, ha='center', va='top', fontweight='italic', fontsize=10)
+            ax.text(x + .5, y, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         elif x != 0 and y == -1: 
-            ax.text(x, y - 0.5, letra, ha='center', va='top', fontweight='italic', fontsize=10)
+            ax.text(x, y - 0.5, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         else:
-            ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='italic', fontsize=10)
+            ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='normal', fontsize=10)
     
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)

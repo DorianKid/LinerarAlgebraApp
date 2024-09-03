@@ -67,10 +67,10 @@ El orden en que se escriben las coordenadas es significativo y a veces se las id
 Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos A(5), B(3), C(-3), D(-5), etc. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 
 ''')
-    largo = random.randint(5, 10)
+    largo = random.randint(5, 9)
     ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
     figura_recta = recta(largo, ubicaciones)
-    st.pyplot(fig= figura_recta, use_container_width=True)
+    st.pyplot(fig= figura_recta, use_container_width=False)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

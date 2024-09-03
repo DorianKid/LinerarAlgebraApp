@@ -23,7 +23,7 @@ if st.session_state.page == 'generate':
     st.header("Definiciones")
     st.subheader("Sistemas de Coordenadas")
 
-    with st.expander("### Ver definiciones"):
+    with st.expander("Ver"):
     
         largo = 8
         ubicaciones = [random.randint(-largo, largo) for _ in range(4)]

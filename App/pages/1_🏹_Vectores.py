@@ -59,7 +59,7 @@ if st.session_state.page == 'generate':
     st.header("Definiciones")
     st.subheader("Sistemas de Coordenadas")
 
-    largo = random.randint(5, 9)
+    largo = 8
     ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
     while len(set(ubicaciones)) != 4: 
         ubicaciones = [random.randint(-largo, largo) for _ in range(4)]

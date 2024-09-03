@@ -60,11 +60,6 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.xaxis.set_tick_params(labelsize=0)
     ax.yaxis.set_tick_params(labelsize=0)
 
-    # Dibujar la línea horizontal
-    ax.axhline(0, xmin=0.04, xmax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
-    # Dibujar la línea vertical
-    ax.axvline(0, ymin=0.04, ymax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
-
     # Dibujar las líneas horizontales (ticks)
     for i in range(-largo_cuadricula, largo_cuadricula+1):
       ax.axhline(i, xmin=0.49, xmax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
@@ -72,6 +67,11 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     # Dibujar las líneas verticales (ticks)
     for i in range(-largo_cuadricula, largo_cuadricula+1):
       ax.axvline(i, ymin=0.49, ymax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
+
+    # Dibujar la línea horizontal
+    ax.axhline(0, xmin=0.04, xmax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
+    # Dibujar la línea vertical
+    ax.axvline(0, ymin=0.04, ymax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
 
     # Agregar etiquetas numéricas horizontales
     for i in range(-largo_cuadricula, 0):

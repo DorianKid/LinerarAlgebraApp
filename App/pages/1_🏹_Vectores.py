@@ -87,7 +87,7 @@ que se intersectan en un punto llamado origen.
 **Características principales**:
 * Eje horizontal: Comúnmente llamado eje de abscisas o eje X.
 * Eje vertical: Conocido como eje de ordenadas o eje Y.
-* Perpendicularidad: Los ejes X e Y son perpendiculares entre sí, formando un ángulo recto (90 grados) en el punto de intersección.
+* Perpendicularidad: Los ejes X e Y son perpendiculares entre sí, formando un ángulo recto ($90\\circ $) en el punto de intersección.
 * Origen: El punto donde los ejes se cruzan se denomina origen y se representa como (0, 0).
 * Escala: Ambos ejes están igualmente escalados, lo que significa que una unidad en el eje X representa la misma distancia que una unidad en el eje Y.
 * Coordenadas: La posición de cualquier punto en el plano se puede describir mediante un par ordenado $(x, y)$.

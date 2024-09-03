@@ -86,7 +86,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
       ax.text(-0.35, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
 
     # Agregar x y y en el este
-    ax.text(largo_cuadricula + 0.75, 0.25, "x", ha='center', va='top', fontweight='bold', fontsize=15)
+    ax.text(largo_cuadricula + 0.75, 0.23, "x", ha='center', va='top', fontweight='bold', fontsize=15)
     ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
 
     # Flechas horizontales

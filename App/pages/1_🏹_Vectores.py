@@ -54,7 +54,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
     
     # Cuadricula
-    ax.grid(True, linewidht=.5)
+    ax.grid(True, linewidth=.5)
 
     # Ocultar las etiquetas de los ticks
     ax.xaxis.set_tick_params(labelsize=0)

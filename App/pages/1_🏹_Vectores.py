@@ -101,7 +101,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     for letra, (x, y)  in pares_ordenados.items():
         ax.plot(x, y, 'o', markersize=7, zorder=3, color="#008000")
         if x == 0:
-            ax.text(x + .75, y + 0.25, letra, ha='center', va='top', fontweight='normal', fontsize=10)
+            ax.text(x + .75, y + 0.1, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         elif x != 0 and y == -1: 
             ax.text(x, y - 0.25, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         else:

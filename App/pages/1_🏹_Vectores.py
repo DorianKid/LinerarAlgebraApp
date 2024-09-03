@@ -1,7 +1,6 @@
 import streamlit as st
+import random
 import matplotlib.pyplot as plt
-from matplotlib import font_manager
-
 
 def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
@@ -68,7 +67,9 @@ El orden en que se escriben las coordenadas es significativo y a veces se las id
 Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos A(5), B(3), C(-3), D(-5), etc. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 
 ''')
-    figura_recta = recta(8, [0,-1,3,-5,7])
+    punto = random.randint(5, 10)
+    ubicaciones = [random.randint(-punto, punto) for _ in range(4)]
+    figura_recta = recta(punto, ubicaciones)
     st.pyplot(fig= figura_recta, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")

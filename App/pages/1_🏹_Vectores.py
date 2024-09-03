@@ -69,7 +69,7 @@ Para representar un número de la recta real se emplean las letras mayúsculas y
 ''')
     largo = random.randint(5, 10)
     ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
-    figura_recta = recta(punto, ubicaciones)
+    figura_recta = recta(largo, ubicaciones)
     st.pyplot(fig= figura_recta, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")

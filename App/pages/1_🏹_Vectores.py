@@ -87,7 +87,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
 
     # Agregar x y y en el este
     ax.text(largo_cuadricula + 0.75, 0.15, "x", ha='center', va='top', fontweight='bold', fontsize=15)
-    ax.text(0, largo_cuadricula + 1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
+    ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
 
     # Flechas horizontales
     ax.annotate("", xy=(largo_cuadricula + 0.5, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
@@ -100,11 +100,14 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     # Agregar un puntos en las posiciones deseadas
     for letra, (x, y)  in pares_ordenados.items():
         ax.plot(x, y, 'ko', markersize=7, zorder=3)
-        ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='bold', fontsize=10)
+        if y == -1: 
+            ax.text(x, y - 0.5, letra, ha='center', va='top', fontweight='bold', fontsize=10)
+        else:
+            ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='bold', fontsize=10)
     
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
-    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
+    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1.1)
     plt.close()
     
     return figura

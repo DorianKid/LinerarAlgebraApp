@@ -5,7 +5,8 @@ from matplotlib import font_manager
 
 def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
-    fig = plt.figure(figsize=(largo_recta*1.5, 1.5))
+    figura = plt.figure(figsize=(largo_recta*1.5, 1.5))
+    
     
     # Crear el lienzo 
     ax = plt.axes()

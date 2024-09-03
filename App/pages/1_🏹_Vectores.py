@@ -182,10 +182,10 @@ En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadran
 
     st.markdown('''
 <div style="text-align: center;">
-<li>Cuadrante I: $x > 0, y > 0$</li>
-<li>Cuadrante II: $x < 0, y > 0$</li>
-<li>Cuadrante III: $x < 0, y < 0$</li>
-<li>Cuadrante IV: $x > 0, y < 0$</li>
+<li>Cuadrante I: $$x > 0, y > 0$$</li>
+<li>Cuadrante II: $$x < 0, y > 0$$</li>
+<li>Cuadrante III: $$x < 0, y < 0$$</li>
+<li>Cuadrante IV: $$x > 0, y < 0$$</li>
 </div>
 ''', unsafe_allow_html=True)
 
@@ -215,10 +215,6 @@ que se intersectan en un punto llamado origen.
 
 **Sólo son sinónimos en el espacio euclídeo*.
 ''')
-
-
-
-
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

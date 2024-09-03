@@ -180,14 +180,21 @@ que se intersectan en un punto llamado origen.
 En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadrantes, numerados en sentido antihorario:
 ''')
 
-    st.markdown('''
-<div style="text-align: center;">
-<li>Cuadrante I: $$x > 0, y > 0$$</li>
-<li>Cuadrante II: $$x < 0, y > 0$$</li>
-<li>Cuadrante III: $$x < 0, y < 0$$</li>
-<li>Cuadrante IV: $$x > 0, y < 0$$</li>
-</div>
-''', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1,1,2])
+    with col1:
+        
+        st.markdown('''
+1. Cuadrante I: 
+2. Cuadrante II: 
+3. Cuadrante III:
+4. Cuadrante IV:
+''')
+
+    with col2:
+st.latex(r"x > 0, y > 0")
+st.latex(r"x < 0, y > 0")
+st.latex(r"x < 0, y < 0")
+st.latex(r"x > 0, y < 0")
 
     largo_2D = 5
     pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]

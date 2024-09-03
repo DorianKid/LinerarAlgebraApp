@@ -114,10 +114,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
     plt.close()
 
-    figura.set_size_inches(1, 1)
-
     return figura
-
 
 st.set_page_config(
     page_title="Vectores",
@@ -181,7 +178,12 @@ que se intersectan en un punto llamado origen.
         pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]
     pares = {f"{pares[0]}":pares[0], f"{pares[1]}":pares[1], f"{pares[2]}":pares[2]}
     figura_2D = cuadricula(largo_2D, pares)
-    st.pyplot(fig= figura_2D, use_container_width=True)
+    
+    # Crear una columna central
+    col1, col2, col3 = st.columns([1, 2, 1])
+    
+    with col2:  # Usar la columna central para el contenido
+        st.pyplot(fig= figura_2D, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

@@ -41,7 +41,7 @@ def recta(largo_recta, ubicaciones_puntos):
 
 def cuadricula(largo_cuadricula, pares_ordenados):
     # Configurar el tamaño de la figura
-    figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
+    figura = plt.figure(figsize=(largo_cuadricula*1, largo_cuadricula*1))
 
     # Crear el lienzo
     ax = plt.axes()

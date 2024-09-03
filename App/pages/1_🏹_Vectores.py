@@ -60,7 +60,7 @@ if st.session_state.page == 'generate':
 
     largo = random.randint(5, 9)
     ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
-    while len(ubicaciones) != 4: 
+    while len(set(ubicaciones)) != 4: 
         ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
         
     st.markdown(f'''

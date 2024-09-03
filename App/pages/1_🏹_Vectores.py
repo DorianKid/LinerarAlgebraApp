@@ -179,14 +179,15 @@ que se intersectan en un punto llamado origen.
 ''')
 
     st.markdown('''
-###### Cuadrantes 
+<div style="text-align: center;">
+###### Cuadrantes:
 En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadrantes, numerados en sentido antihorario:
-
 1. **Cuadrante I**: $x > 0, y > 0$
 2. **Cuadrante II**: $x < 0, y > 0$
 3. **Cuadrante III**: $x < 0, y < 0$
 4. **Cuadrante IV**: $x > 0, y < 0$
-''')
+</div>
+''', unsafe_allow_html=True)
 
     largo_2D = 5
     pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]

@@ -98,7 +98,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.annotate("", xy=(0, -largo_cuadricula - 0.5), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
 
     # Agregar un puntos en las posiciones deseadas
-    for letra, (x, y)  in ubicaciones_puntos.items():
+    for letra, (x, y)  in pares_ordenados.items():
         ax.plot(x, y, 'ko', markersize=7, zorder=3)
         ax.text(x, y + 0.3, letra, ha='center', va='top', fontweight='bold', fontsize=12)
     

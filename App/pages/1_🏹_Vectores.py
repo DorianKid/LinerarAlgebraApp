@@ -177,7 +177,7 @@ que se intersectan en un punto llamado origen.
         pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]
     pares = {f"{pares[0]}":pares[0], f"{pares[1]}":pares[1], f"{pares[2]}":pares[2]}
     figura_2D = cuadricula(largo_2D, pares)
-    st.pyplot(fig= figura_2D, use_container_width=False)
+    st.pyplot(fig= figura_2D, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

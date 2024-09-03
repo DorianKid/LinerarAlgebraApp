@@ -100,7 +100,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     # Agregar un puntos en las posiciones deseadas
     for letra, (x, y)  in pares_ordenados.items():
         ax.plot(x, y, 'ko', markersize=7, zorder=3)
-        ax.text(x, y + 0.3, letra, ha='center', va='top', fontweight='bold', fontsize=12)
+        ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='bold', fontsize=10)
     
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
@@ -167,9 +167,9 @@ que se intersectan en un punto llamado origen.
 ''')
 
     largo_2D = 5
-    pares = [(random.randint(-largo, largo), random.randint(-largo, largo)) for _ in range(3)]
+    pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]
     while len(set(pares)) != 3: 
-        pares = [(random.randint(-largo, largo), random.randint(-largo, largo)) for _ in range(3)]
+        pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]
     pares = {f"{pares[0]}":pares[0], f"{pares[1]}":pares[1], f"{pares[2]}":pares[2]}
     figura_2D = cuadricula(largo_2D, pares)
     st.pyplot(fig= figura_2D, use_container_width=True)

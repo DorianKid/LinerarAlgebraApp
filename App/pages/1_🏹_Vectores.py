@@ -90,12 +90,12 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
 
     # Flechas horizontales
-    ax.annotate("", xy=(largo_cuadricula + 0.5, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(-largo_cuadricula - 0.5, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(largo_cuadricula + 0.52, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(-largo_cuadricula - 0.52, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
 
     # Flechas verticales
-    ax.annotate("", xy=(0, largo_cuadricula + 0.5), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(0, -largo_cuadricula - 0.5), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(0, largo_cuadricula + 0.52), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(0, -largo_cuadricula - 0.52), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
 
     # Agregar un puntos en las posiciones deseadas
     for letra, (x, y)  in pares_ordenados.items():

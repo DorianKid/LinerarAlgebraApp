@@ -67,23 +67,23 @@ def cuadricula(largo_cuadricula, pares_ordenados):
 
     # Dibujar las líneas horizontales (ticks)
     for i in range(-largo_cuadricula, largo_cuadricula+1):
-      ax.axhline(i, xmin=0.49, xmax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
+      ax.axhline(i, xmin=0.49, xmax=0.51, color='#0f0f0f', linewidth=3, zorder=2)
 
     # Dibujar las líneas verticales (ticks)
     for i in range(-largo_cuadricula, largo_cuadricula+1):
-      ax.axvline(i, ymin=0.49, ymax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
+      ax.axvline(i, ymin=0.49, ymax=0.51, color='#0f0f0f', linewidth=3, zorder=2)
 
     # Agregar etiquetas numéricas horizontales
     for i in range(-largo_cuadricula, 0):
-      ax.text(i - 0.05, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+      ax.text(i - 0.05, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
     for i in range(1, largo_cuadricula+1):
-      ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+      ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
 
     # Agregar etiquetas numéricas verticales
     for i in range(-largo_cuadricula, 0):
-      ax.text(-0.4, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+      ax.text(-0.4, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
     for i in range(1, largo_cuadricula+1):
-      ax.text(-0.35, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+      ax.text(-0.35, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
 
     # Agregar x y y en el este
     ax.text(largo_cuadricula + 0.75, 0.23, "x", ha='center', va='top', fontweight='bold', fontsize=15)

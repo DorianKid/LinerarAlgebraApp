@@ -89,6 +89,12 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     ax.text(largo_cuadricula + 0.75, 0.23, "x", ha='center', va='top', fontweight='bold', fontsize=15)
     ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
 
+    # Agregar numero de cuadrantes en el este
+    ax.text(largo_cuadricula - .5, largo_cuadricula - .5, "I", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
+    ax.text(-largo_cuadricula + .5, largo_cuadricula - .5, "II", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
+    ax.text(-largo_cuadricula + .5, -largo_cuadricula + .5, "III", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
+    ax.text(largo_cuadricula - .5, -largo_cuadricula + .5, "IV", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
+
     # Flechas horizontales
     ax.annotate("", xy=(largo_cuadricula + 0.55, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
     ax.annotate("", xy=(-largo_cuadricula - 0.55, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
@@ -108,77 +114,6 @@ def cuadricula(largo_cuadricula, pares_ordenados):
             ax.text(x + .75, y - 0.75, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         else:
             ax.text(x, y + 0.5, letra, ha='center', va='top', fontweight='normal', fontsize=10)
-    
-    # Ajustar los límites del lienzo
-    ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
-    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
-    plt.close()
-
-    return figura
-
-def cuadricula_cuadrantes(largo_cuadricula):
-    # Configurar el tamaño de la figura
-    figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
-
-    # Crear el lienzo
-    ax = plt.axes()
-
-    # Ocultar los ejes
-    ax.set_frame_on(False)
-    
-    # Establecer los ticks para que vayan de 1 en 1
-    ax.set_xticks(range(-largo_cuadricula, largo_cuadricula+1))
-    ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
-    
-    # Cuadricula
-    ax.grid(True, linewidth=.5)
-
-    # Dibujar la línea horizontal
-    ax.axhline(0, xmin=0.04, xmax=0.96, color='#0f0f0f', linewidth=3, zorder=2)
-    # Dibujar la línea vertical
-    ax.axvline(0, ymin=0.04, ymax=0.96, color='#0f0f0f', linewidth=3, zorder=2)
-
-    # Ocultar las etiquetas de los ticks
-    ax.xaxis.set_tick_params(labelsize=0)
-    ax.yaxis.set_tick_params(labelsize=0)
-
-    # Dibujar las líneas horizontales (ticks)
-    for i in range(-largo_cuadricula, largo_cuadricula+1):
-      ax.axhline(i, xmin=0.49, xmax=0.51, color='#0f0f0f', linewidth=3, zorder=2)
-
-    # Dibujar las líneas verticales (ticks)
-    for i in range(-largo_cuadricula, largo_cuadricula+1):
-      ax.axvline(i, ymin=0.49, ymax=0.51, color='#0f0f0f', linewidth=3, zorder=2)
-
-    # Agregar etiquetas numéricas horizontales
-    for i in range(-largo_cuadricula, 0):
-      ax.text(i - 0.05, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
-    for i in range(1, largo_cuadricula+1):
-      ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
-
-    # Agregar etiquetas numéricas verticales
-    for i in range(-largo_cuadricula, 0):
-      ax.text(-0.4, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
-    for i in range(1, largo_cuadricula+1):
-      ax.text(-0.35, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=13)
-
-    # Agregar x y y en el este
-    ax.text(largo_cuadricula + 0.75, 0.23, "x", ha='center', va='top', fontweight='bold', fontsize=15)
-    ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
-
-    # Agregar numero de cuadrantes en el este
-    ax.text(largo_cuadricula/2, largo_cuadricula/2, "I", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
-    ax.text(-largo_cuadricula/2, largo_cuadricula/2, "II", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
-    ax.text(-largo_cuadricula/2, -largo_cuadricula/2, "III", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
-    ax.text(largo_cuadricula/2, -largo_cuadricula/2, "IV", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
-
-    # Flechas horizontales
-    ax.annotate("", xy=(largo_cuadricula + 0.55, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(-largo_cuadricula - 0.55, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-
-    # Flechas verticales
-    ax.annotate("", xy=(0, largo_cuadricula + 0.55), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(0, -largo_cuadricula - 0.55), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
     
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)

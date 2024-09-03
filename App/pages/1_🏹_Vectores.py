@@ -191,10 +191,10 @@ En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadran
 ''')
 
     with col2:
-st.latex(r"x > 0, y > 0")
-st.latex(r"x < 0, y > 0")
-st.latex(r"x < 0, y < 0")
-st.latex(r"x > 0, y < 0")
+        st.latex(r"x > 0, y > 0")
+        st.latex(r"x < 0, y > 0")
+        st.latex(r"x < 0, y < 0")
+        st.latex(r"x > 0, y < 0")
 
     largo_2D = 5
     pares = [(random.randint(-largo_2D, largo_2D), random.randint(-largo_2D, largo_2D)) for _ in range(3)]

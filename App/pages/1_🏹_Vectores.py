@@ -20,10 +20,8 @@ if 'page' not in st.session_state:
     
 if st.session_state.page == 'generate':
     st.title("Vectores")
-    st.header("Definiciones")
-    st.subheader("Sistemas de Coordenadas")
-
-    with st.expander("Ver"):
+    st.header("Sistema de Coordenadas")
+    with st.expander("Definiciones"):
     
         largo = 8
         ubicaciones = [random.randint(-largo, largo) for _ in range(4)]

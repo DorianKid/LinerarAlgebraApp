@@ -69,7 +69,7 @@ Para representar un número de la recta real se emplean las letras mayúsculas y
 
 ''')
     figura_recta = recta(8, [0,-1,3,-5,7])
-    st.pyplot(fig= figura_recta)
+    st.pyplot(fig= figura_recta, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

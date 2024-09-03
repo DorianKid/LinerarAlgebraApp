@@ -67,12 +67,13 @@ if st.session_state.page == 'generate':
     st.markdown(f'''
 **Definición**: Un sistema de coordenadas es un :blue[sistema de referencia] que utiliza uno o más números (coordenadas) para determinar unívocamente la posición
 de un punto u objeto geométrico. El orden en que se escriben las coordenadas es significativo y a veces se las identifica por su posición en una tupla ordenada 
-$(0,0,0)$; también se las puede representar con letras, como por ejemplo «la coordenada-x». 
+$(0,0,0)$; también se las puede representar con letras, como por ejemplo «la coordenada-x». [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 
 #### Diferentes Sistemas de Coordenadas
 ##### Recta Real
-Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos *A({ubicaciones[0]})*, 
-*B({ubicaciones[1]})*, *C({ubicaciones[2]})*, *D({ubicaciones[3]})*. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
+Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo: 
+
+los puntos **A({ubicaciones[0]})**, **B({ubicaciones[1]})**, **C({ubicaciones[2]})**, **D({ubicaciones[3]})**. 
 ''')
 
     ubicaciones = {"A":ubicaciones[0], "B":ubicaciones[1], "C":ubicaciones[2], "D":ubicaciones[3]}

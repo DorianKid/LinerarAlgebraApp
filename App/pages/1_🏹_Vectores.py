@@ -270,11 +270,9 @@ En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadran
     with col2:  # Usar la columna central para el contenido
         st.pyplot(fig= figura_quad, use_container_width=True)
 
-
-
     st.markdown(f'''
 ##### Sistema de Coordenadas Cartesianas (3-D)
-Al igual que el sistema anterior, este sistema se define por tres ejes perependiculares entre sí (también se puede extender a $\\mathbb{R}^{n}$), 
+Al igual que el sistema anterior, este sistema se define por tres ejes perependiculares entre sí (también se puede extender a $$\\mathbb{R}^{n}$$), 
 que se intersectan en un punto llamado origen. 
 
 **Características principales**:

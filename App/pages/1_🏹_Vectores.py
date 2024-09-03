@@ -107,7 +107,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
-    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1.1)
+    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
     plt.close()
     
     return figura

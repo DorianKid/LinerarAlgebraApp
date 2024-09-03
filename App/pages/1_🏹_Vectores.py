@@ -39,6 +39,77 @@ def recta(largo_recta, ubicaciones_puntos):
 
     return figura
 
+def cuadricula(largo_cuadricula, pares_ordenados):
+    # Configurar el tamaño de la figura
+    figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
+
+    # Crear el lienzo
+    ax = plt.axes()
+
+    # Ocultar los ejes
+    ax.set_frame_on(False)
+    
+    # Establecer los ticks para que vayan de 1 en 1
+    ax.set_xticks(range(-largo_cuadricula, largo_cuadricula+1))
+    ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
+    
+    # Cuadricula
+    ax.grid(True)
+
+    # Ocultar las etiquetas de los ticks
+    ax.xaxis.set_tick_params(labelsize=0)
+    ax.yaxis.set_tick_params(labelsize=0)
+
+    # Dibujar la línea horizontal
+    ax.axhline(0, xmin=0.04, xmax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
+    # Dibujar la línea vertical
+    ax.axvline(0, ymin=0.04, ymax=0.96, color='#0f0f0f', linewidth=3, zorder=1)
+
+    # Dibujar las líneas horizontales (ticks)
+    for i in range(-largo_cuadricula, largo_cuadricula+1):
+      ax.axhline(i, xmin=0.49, xmax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
+
+    # Dibujar las líneas verticales (ticks)
+    for i in range(-largo_cuadricula, largo_cuadricula+1):
+      ax.axvline(i, ymin=0.49, ymax=0.51, color='#0f0f0f', linewidth=3, zorder=1)
+
+    # Agregar etiquetas numéricas horizontales
+    for i in range(-largo_cuadricula, 0):
+      ax.text(i - 0.05, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+    for i in range(1, largo_cuadricula+1):
+      ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+
+    # Agregar etiquetas numéricas verticales
+    for i in range(-largo_cuadricula, 0):
+      ax.text(-0.4, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+    for i in range(1, largo_cuadricula+1):
+      ax.text(-0.35, i + 0.15, str(i), ha='center', va='top', fontweight='bold', fontsize=15)
+
+    # Agregar x y y en el este
+    ax.text(largo_cuadricula + 0.75, 0.15, "x", ha='center', va='top', fontweight='bold', fontsize=15)
+    ax.text(0, largo_cuadricula + 1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
+
+    # Flechas horizontales
+    ax.annotate("", xy=(largo_cuadricula + 0.5, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(-largo_cuadricula - 0.5, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+
+    # Flechas verticales
+    ax.annotate("", xy=(0, largo_cuadricula + 0.5), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(0, -largo_cuadricula - 0.5), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+
+    # Agregar un puntos en las posiciones deseadas
+    for letra, (x, y)  in ubicaciones_puntos.items():
+        ax.plot(x, y, 'ko', markersize=7, zorder=3)
+        ax.text(x, y + 0.3, letra, ha='center', va='top', fontweight='bold', fontsize=12)
+    
+    # Ajustar los límites del lienzo
+    ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
+    ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
+    plt.close()
+    
+    return figura
+
+
 st.set_page_config(
     page_title="Vectores",
     page_icon="🏹",  
@@ -85,15 +156,23 @@ Un sistema de coordenadas rectangular se define por dos ejes ortogonales (perpen
 que se intersectan en un punto llamado origen. 
 
 **Características principales**:
-* Eje horizontal: Comúnmente llamado eje de abscisas o eje X.
-* Eje vertical: Conocido como eje de ordenadas o eje Y.
-* Perpendicularidad: Los ejes X e Y son perpendiculares entre sí, formando un ángulo recto ($90\\circ $) en el punto de intersección.
-* Origen: El punto donde los ejes se cruzan se denomina origen y se representa como (0, 0).
-* Escala: Ambos ejes están igualmente escalados, lo que significa que una unidad en el eje X representa la misma distancia que una unidad en el eje Y.
+* Eje horizontal: Comúnmente llamado eje de abscisas o eje $X$.
+* Eje vertical: Conocido como eje de ordenadas o eje $Y$.
+* Perpendicularidad: Los ejes $X$ e $Y$ son perpendiculares entre sí, formando un ángulo recto ($90^{{\\circ}}$) en el punto de intersección.
+* Origen: El punto donde los ejes se cruzan se denomina origen y se representa como $(0, 0)$.
+* Escala: Ambos ejes están igualmente escalados, lo que significa que una unidad en el eje $X$ representa la misma distancia que una unidad en el eje $Y$.
 * Coordenadas: La posición de cualquier punto en el plano se puede describir mediante un par ordenado $(x, y)$.
 
 **Sólo son sinónimos en el espacio euclídeo*.
 ''')
+
+    largo_2D = 5
+    pares = [(random.randint(-largo, largo), random.randint(-largo, largo)) for _ in range(3)]
+    while len(set(pares)) != 3: 
+        pares = [(random.randint(-largo, largo), random.randint(-largo, largo)) for _ in range(3)]
+    pares = {f"{pares[0]}":pares[0], f"{pares[1]}":pares[1], f"{pares[2]}":pares[2]}
+    figura_2D = cuadricula(largo_2D, pares)
+    st.pyplot(fig= figura_2D, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

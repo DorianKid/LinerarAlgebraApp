@@ -176,16 +176,16 @@ que se intersectan en un punto llamado origen.
 * **Coordenadas**: La posición de cualquier punto en el plano se puede describir mediante un par ordenado $(x, y)$.
 
 **Sólo son sinónimos en el espacio euclídeo*.
+###### Cuadrantes:
+En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadrantes, numerados en sentido antihorario:
 ''')
 
     st.markdown('''
 <div style="text-align: center;">
-###### Cuadrantes:
-En un sistema de coordenadas rectangulares, el plano se divide en cuatro cuadrantes, numerados en sentido antihorario:
-1. **Cuadrante I**: $x > 0, y > 0$
-2. **Cuadrante II**: $x < 0, y > 0$
-3. **Cuadrante III**: $x < 0, y < 0$
-4. **Cuadrante IV**: $x > 0, y < 0$
+<li>Cuadrante I: $x > 0, y > 0$</li>
+<li>Cuadrante II: $x < 0, y > 0$</li>
+<li>Cuadrante III: $x < 0, y < 0$</li>
+<li>Cuadrante IV: $x > 0, y < 0$</li>
 </div>
 ''', unsafe_allow_html=True)
 

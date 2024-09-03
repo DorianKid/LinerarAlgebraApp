@@ -167,10 +167,10 @@ def cuadricula_cuadrantes(largo_cuadricula):
     ax.text(0, largo_cuadricula + 1.1, "y", ha='center', va='top', fontweight='bold', fontsize=15)
 
     # Agregar numero de cuadrantes en el este
-    ax.text(largo_cuadricula/2, largo_cuadricula/2, "I", ha='center', va='top', fontweight='roman', fontsize=15)
-    ax.text(-largo_cuadricula/2, largo_cuadricula/2, "II", ha='center', va='top', fontweight='roman', fontsize=15)
-    ax.text(-largo_cuadricula/2, -largo_cuadricula/2, "III", ha='center', va='top', fontweight='roman', fontsize=15)
-    ax.text(largo_cuadricula/2, -largo_cuadricula/2, "IV", ha='center', va='top', fontweight='roman', fontsize=15)
+    ax.text(largo_cuadricula/2, largo_cuadricula/2, "I", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
+    ax.text(-largo_cuadricula/2, largo_cuadricula/2, "II", ha='center', va='top', fontweight='roman', fontsize=25, color="blue")
+    ax.text(-largo_cuadricula/2, -largo_cuadricula/2, "III", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
+    ax.text(largo_cuadricula/2, -largo_cuadricula/2, "IV", ha='center', va='top', fontweight='roman', fontsize=25,color="blue")
 
     # Flechas horizontales
     ax.annotate("", xy=(largo_cuadricula + 0.55, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))

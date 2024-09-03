@@ -25,7 +25,7 @@ def recta(largo_recta, ubicaciones_puntos):
         ax.text(i, -0.3, str(i), ha='center', va='top', fontweight='bold', fontsize=12)
     
     # Agregar un punto en la posición deseada
-    for punto in ubiaciones_puntos:
+    for punto in ubicaciones_puntos:
         ax.plot(punto, 0, 'ko', markersize=7, zorder=3)
     
     # Flechas

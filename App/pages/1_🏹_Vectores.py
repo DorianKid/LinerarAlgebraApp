@@ -58,17 +58,22 @@ if st.session_state.page == 'generate':
     st.title("Vectores")
     st.header("Definiciones")
     st.subheader("Sistemas de Coordenadas")
-    st.markdown('''
+
+    ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
+    largo = random.randint(5, 9)
+    while len(ubicaciones) != 4: 
+        ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
+        
+    st.markdown(f'''
 **Definición**: Un sistema de coordenadas es un :blue[sistema de referencia] que utiliza uno o más números (coordenadas) para determinar unívocamente la posición de un punto u objeto geométrico. 
 El orden en que se escriben las coordenadas es significativo y a veces se las identifica por su posición en una tupla ordenada $(0,0,0)$; también se las puede representar con letras, como por ejemplo «la coordenada-x». 
 
 #### Diferentes Sistemas de Coordenadas
 ##### Recta Real
-Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, los puntos A(5), B(3), C(-3), D(-5), etc. [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
-
+Para representar un número de la recta real se emplean las letras mayúsculas y sus coordenadas correspondientes, por ejemplo, 
+los puntos A({ubicaciones[0]}), B({ubicaciones[0]}), C({ubicaciones[0]}), D({ubicaciones[0]}). [1](https://es.wikipedia.org/wiki/Sistema_de_coordenadas)
 ''')
-    largo = random.randint(5, 9)
-    ubicaciones = [random.randint(-largo, largo) for _ in range(4)]
+
     figura_recta = recta(largo, ubicaciones)
     st.pyplot(fig= figura_recta, use_container_width=True)
     

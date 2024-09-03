@@ -1,8 +1,7 @@
 import streamlit as st
 import random
 import matplotlib.pyplot as plt
-
-
+from graficos import recta, cuadricula
 
 st.set_page_config(
     page_title="Vectores",

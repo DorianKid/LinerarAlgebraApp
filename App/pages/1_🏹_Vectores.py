@@ -26,7 +26,7 @@ def recta(largo_recta, ubicaciones_puntos):
     # Agregar un puntos en las posiciones deseadas
     for letra, punto in ubicaciones_puntos.items():
         ax.plot(punto, 0, 'ko', markersize=7, zorder=3)
-        ax.text(punto, 0.3, letra, ha='center', va='top', fontweight='bold', fontsize=12)
+        ax.text(punto, 0.5, letra, ha='center', va='top', fontweight='bold', fontsize=12)
     
     # Flechas
     ax.annotate("", xy=(largo_recta + 0.5, 0), xytext=(largo_recta + 0.4, 0), arrowprops=dict(color='#C83C2C', linewidth=2, headlength=10, headwidth=8))

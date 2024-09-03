@@ -99,7 +99,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
 
     # Agregar un puntos en las posiciones deseadas
     for letra, (x, y)  in pares_ordenados.items():
-        ax.plot(x, y, 'bo', markersize=7, zorder=3)
+        ax.plot(x, y, 'o', markersize=7, zorder=3, color="#008000")
         if x == 0:
             ax.text(x + .5, y, letra, ha='center', va='top', fontweight='normal', fontsize=10)
         elif x != 0 and y == -1: 

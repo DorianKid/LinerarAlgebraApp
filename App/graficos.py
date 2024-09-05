@@ -143,17 +143,11 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.plot([-largo_cuadricula, largo_cuadricula], [0, 0], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
-    
-    # Agregar flechas al final de cada eje
-    arrow_props = dict(mutation_scale=20, arrowstyle='->', color='black', linewidth=2)
-    # Flecha para el eje X
-    ax.annotate("", xy=(largo_cuadricula + 0.55, 0, 0), xytext=(largo_cuadricula + 0.4, 0, 0), arrowprops=arrow_props)
-    
-    # Flecha para el eje Y
-    ax.annotate("", xy=(0, largo_cuadricula + 0.55, 0), xytext=(0, largo_cuadricula + 0.4, 0), arrowprops=arrow_props)
-    
-    # Flecha para el eje Z
-    ax.annotate("", xy=(0, 0, largo_cuadricula + 0.55), xytext=(0, 0, largo_cuadricula + 0.4), arrowprops=arrow_props)
+
+    # Agregar flechas al final de los ejes
+    ax.quiver(0, 0, 0, largo_cuadricula, 0, 0, color='black', arrow_length_ratio=0.1)
+    ax.quiver(0, 0, 0, 0, largo_cuadricula, 0, color='black', arrow_length_ratio=0.1)
+    ax.quiver(0, 0, 0, 0, 0, largo_cuadricula, color='black', arrow_length_ratio=0.1)
     
     # Agregar etiquetas de los ejes en las partes positivas
     ax.text(largo_cuadricula + 0.5, 0, 0, 'X', fontsize=12)
@@ -162,7 +156,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     
     # Agregar puntos en las posiciones deseadas
     for letra, (x, y, z) in pares_ordenados.items():
-        ax.quiver(0, 0, 0, x, y, z, color='red', arrow_length_ratio=0.05)
+        ax.quiver(0, 0, 0, x, y, z, color='red', arrow_length_ratio=0.075)
         ax.scatter(x, y, z, color='green', s=50, zorder=3)
         ax.text(x, y, z, letra, fontsize=10)
     

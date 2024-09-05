@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 import matplotlib.pyplot as plt
-from graficos import recta, cuadricula
+from graficos import recta, cuadricula, cuadricula_3D
 
 st.set_page_config(
     page_title="Vectores",
@@ -87,6 +87,19 @@ if st.session_state.page == 'generate':
     
     **Sólo son sinónimos en el espacio euclídeo*.
     ''')
+
+            largo_3D = 5
+        pares_3D = [(random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D)) for _ in range(3)]
+        while len(set(pares_3D)) != 3: 
+            pares_3D = [(random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D)) for _ in range(3)]
+        pares_3D = {f"{pares_3D[0]}":pares_3D[0], f"{pares_3D[1]}":pares_3D[1], f"{pares_3D[2]}":pares_3D[2]}
+        figura_3D = cuadricula_3D(largo_3D, pares)
+        
+        # Crear una columna central
+        col1, col2, col3 = st.columns([1, 2, 1])
+            
+        with col2:  # Usar la columna central para el contenido
+            st.pyplot(fig= figura_3D, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

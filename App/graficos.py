@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
@@ -116,6 +117,51 @@ def cuadricula(largo_cuadricula, pares_ordenados):
     # Ajustar los límites del lienzo
     ax.set_xlim(-largo_cuadricula - 1, largo_cuadricula + 1)
     ax.set_ylim(-largo_cuadricula - 1, largo_cuadricula + 1)
+    plt.close()
+
+    return figura
+
+def cuadricula_3d(largo_cuadricula, pares_ordenados):
+    # Configurar el tamaño de la figura
+    figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
+
+    # Crear el lienzo 3D
+    ax = figura.add_subplot(111, projection='3d')
+
+    # Configurar los límites de los ejes
+    ax.set_xlim(-largo_cuadricula, largo_cuadricula)
+    ax.set_ylim(-largo_cuadricula, largo_cuadricula)
+    ax.set_zlim(-largo_cuadricula, largo_cuadricula)
+
+    # Establecer los ticks para que vayan de 1 en 1
+    ax.set_xticks(range(-largo_cuadricula, largo_cuadricula+1))
+    ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
+    ax.set_zticks(range(-largo_cuadricula, largo_cuadricula+1))
+
+    # Dibujar las líneas de la cuadrícula
+    for i in range(-largo_cuadricula, largo_cuadricula+1):
+        ax.plot([-largo_cuadricula, largo_cuadricula], [i, i], [0, 0], color='gray', linestyle=':', linewidth=0.5)
+        ax.plot([i, i], [-largo_cuadricula, largo_cuadricula], [0, 0], color='gray', linestyle=':', linewidth=0.5)
+        ax.plot([i, i], [0, 0], [-largo_cuadricula, largo_cuadricula], color='gray', linestyle=':', linewidth=0.5)
+
+    # Dibujar los ejes principales
+    ax.plot([-largo_cuadricula, largo_cuadricula], [0, 0], [0, 0], color='black', linewidth=2)
+    ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
+    ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
+
+    # Agregar etiquetas de los ejes
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+
+    # Agregar puntos en las posiciones deseadas
+    for letra, (x, y, z) in pares_ordenados.items():
+        ax.scatter(x, y, z, color='green', s=50, zorder=3)
+        ax.text(x, y, z, letra, fontsize=10)
+
+    # Ajustar la vista
+    ax.view_init(elev=20, azim=45)
+
     plt.close()
 
     return figura

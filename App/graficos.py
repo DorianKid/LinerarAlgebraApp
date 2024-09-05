@@ -121,7 +121,7 @@ def cuadricula(largo_cuadricula, pares_ordenados):
 
     return figura
 
-def cuadricula_3d(largo_cuadricula, pares_ordenados):
+def cuadricula_3D(largo_cuadricula, pares_ordenados):
     # Configurar el tamaño de la figura
     figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
 

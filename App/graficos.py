@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import plotly.graph_objects as go
 
 def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
@@ -165,3 +166,38 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     plt.close()
 
     return figura
+    
+def cuadricula_3D_interactiva(largo_cuadricula, pares_ordenados):
+    # Crear la figura 3D
+    fig = go.Figure()
+
+    # Dibujar las líneas de la cuadrícula
+    for i in range(-largo_cuadricula, largo_cuadricula+1):
+        fig.add_trace(go.Scatter3d(x=[-largo_cuadricula, largo_cuadricula], y=[i, i], z=[0, 0],
+                                   mode='lines', line=dict(color='gray', width=1, dash='dot')))
+        fig.add_trace(go.Scatter3d(x=[i, i], y=[-largo_cuadricula, largo_cuadricula], z=[0, 0],
+                                   mode='lines', line=dict(color='gray', width=1, dash='dot')))
+        fig.add_trace(go.Scatter3d(x=[i, i], y=[0, 0], z=[-largo_cuadricula, largo_cuadricula],
+                                   mode='lines', line=dict(color='gray', width=1, dash='dot')))
+
+    # Dibujar los ejes principales
+    fig.add_trace(go.Scatter3d(x=[-largo_cuadricula, largo_cuadricula], y=[0, 0], z=[0, 0],
+                               mode='lines', line=dict(color='black', width=4)))
+    fig.add_trace(go.Scatter3d(x=[0, 0], y=[-largo_cuadricula, largo_cuadricula], z=[0, 0],
+                               mode='lines', line=dict(color='black', width=4)))
+    fig.add_trace(go.Scatter3d(x=[0, 0], y=[0, 0], z=[-largo_cuadricula, largo_cuadricula],
+                               mode='lines', line=dict(color='black', width=4)))
+
+    # Agregar puntos en las posiciones deseadas
+    for letra, (x, y, z) in pares_ordenados.items():
+        fig.add_trace(go.Scatter3d(x=[x], y=[y], z=[z],
+                                   mode='markers+text', text=[letra], textposition='top center',
+                                   marker=dict(color='green', size=5)))
+
+    # Configurar los límites de los ejes
+    fig.update_layout(scene=dict(
+        xaxis=dict(range=[-largo_cuadricula, largo_cuadricula], title='X'),
+        yaxis=dict(range=[-largo_cuadricula, largo_cuadricula], title='Y'),
+        zaxis=dict(range=[-largo_cuadricula, largo_cuadricula], title='Z')
+    ))
+

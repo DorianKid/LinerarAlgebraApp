@@ -150,12 +150,6 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     # Flecha para el eje X
     ax.annotate("", xy=(largo_cuadricula + 0.55, 0, 0), xytext=(largo_cuadricula + 0.4, 0, 0), arrowprops=arrow_props)
     
-    # Flecha para el eje Y
-    ax.annotate("", xy=(0, largo_cuadricula + 0.55, 0), xytext=(0, largo_cuadricula + 0.4, 0), arrowprops=arrow_props)
-    
-    # Flecha para el eje Z
-    ax.annotate("", xy=(0, 0, largo_cuadricula + 0.55), xytext=(0, 0, largo_cuadricula + 0.4),arrowprops=arrow_props)
-    
     # Agregar etiquetas de los ejes en las partes positivas
     ax.text(largo_cuadricula + 0.5, 0, 0, 'X', fontsize=12)
     ax.text(0, largo_cuadricula + 0.5, 0, 'Y', fontsize=12)

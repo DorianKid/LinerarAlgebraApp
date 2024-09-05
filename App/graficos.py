@@ -143,12 +143,8 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.plot([-largo_cuadricula, largo_cuadricula], [0, 0], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
+
     
-    # Dibujar las líneas de la cuadrícula
-    for i in range(-largo_cuadricula, largo_cuadricula+1):
-        ax.plot([-largo_cuadricula, largo_cuadricula], [i, i], [0, 0], color='gray', linestyle=':', linewidth=0.5)
-        ax.plot([i, i], [-largo_cuadricula, largo_cuadricula], [0, 0], color='gray', linestyle=':', linewidth=0.5)
-        ax.plot([i, i], [0, 0], [-largo_cuadricula, largo_cuadricula], color='gray', linestyle=':', linewidth=0.5)
     
     # Dibujar los ejes principales con flechas
     ax.quiver(0, 0, 0, largo_cuadricula, 0, 0, color='black', arrow_length_ratio=0.1)

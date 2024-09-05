@@ -101,6 +101,12 @@ if st.session_state.page == 'generate':
             
         with col2:  # Usar la columna central para el contenido
             st.plotly_chart(figura_3D_int)
+
+            # Crear una columna central
+        col1, col2, col3 = st.columns([1, 2, 1])
+            
+        with col2:  # Usar la columna central para el contenido
+            st.pyplot(fig= figura_3D, use_container_width=True)
     
     st.subheader("Vector Renglón y Vector Columna")
     st.markdown('''

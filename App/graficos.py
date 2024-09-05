@@ -158,7 +158,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     for (letra, (x, y, z)), color in zip(pares_ordenados.items(), ["red", "blue", "green"]):
         #ax.quiver(0, 0, 0, x, y, z, color=color, arrow_length_ratio=0.075)
         ax.scatter(x, y, z, color=color, s=50, zorder=3)
-        ax.text(1.1*x, 1.1*y, 1.1*z, letra, fontsize=10)
+        ax.text(1.15*x, 1.15*y, 1.15*z, letra, fontsize=10)
     
     # Ajustar la vista
     ax.view_init(elev=20, azim=45)

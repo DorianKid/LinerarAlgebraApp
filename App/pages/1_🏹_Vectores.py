@@ -88,7 +88,7 @@ if st.session_state.page == 'generate':
     **Sólo son sinónimos en el espacio euclídeo*.
     ''')
 
-            largo_3D = 5
+        largo_3D = 5
         pares_3D = [(random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D)) for _ in range(3)]
         while len(set(pares_3D)) != 3: 
             pares_3D = [(random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D), random.randint(-largo_3D, largo_3D)) for _ in range(3)]

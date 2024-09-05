@@ -147,8 +147,8 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
 
     # Agregar las flechas 
     # Flechas horizontales
-    ax.annotate("", xyz=(largo_cuadricula + 0.55, 0, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(-largo_cuadricula - 0.55, 0, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xyz=(largo_cuadricula + 0.55, 0, 0), xyztext=(largo_cuadricula + 0.4, 0, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xyz=(-largo_cuadricula - 0.55, 0, 0), xyztext=(-largo_cuadricula - 0.4, 0, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
 
     # Flechas verticales
     ax.annotate("", xy=(0, largo_cuadricula + 0.55), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))

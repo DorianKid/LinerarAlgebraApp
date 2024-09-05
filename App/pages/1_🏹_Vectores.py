@@ -97,10 +97,10 @@ if st.session_state.page == 'generate':
         figura_3D_int = cuadricula_3D_interactiva(largo_3D, pares_3D)
         
         # Crear una columna central
-        col1, col2, col3 = st.columns([1, 2, 1])
+        #col1, col2, col3 = st.columns([1, 2, 1])
             
-        with col2:  # Usar la columna central para el contenido
-            st.plotly_chart(figura_3D_int)
+        #with col2:  # Usar la columna central para el contenido
+            #st.plotly_chart(figura_3D_int)
 
             # Crear una columna central
         col1, col2, col3 = st.columns([1, 2, 1])

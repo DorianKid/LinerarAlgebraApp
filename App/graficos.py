@@ -150,7 +150,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.quiver(0, 0, 0, 0, 0, largo_cuadricula, color='black', arrow_length_ratio=0.1)
     
     # Agregar etiquetas de los ejes en las partes positivas
-    ax.text(largo_cuadricula + 0.5, 0, -0.15, 'X', fontsize=12)
+    ax.text(largo_cuadricula + 0.5, 0, -0.05, 'X', fontsize=12)
     ax.text(0, largo_cuadricula + 0.5, -0.15, 'Y', fontsize=12)
     ax.text(0 , -0.15, largo_cuadricula + 0.5, 'Z', fontsize=12)
     

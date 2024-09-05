@@ -152,7 +152,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     # Agregar etiquetas de los ejes en las partes positivas
     ax.text(largo_cuadricula + 0.5, 0, 0, 'X', fontsize=12)
     ax.text(0, largo_cuadricula + 0.5, 0, 'Y', fontsize=12)
-    ax.text(0, 0, largo_cuadricula, 'Z', fontsize=12)
+    ax.text(-0.25 , -0.25, largo_cuadricula + 0.5, 'Z', fontsize=12)
     
     # Agregar puntos en las posiciones deseadas
     for letra, (x, y, z) in pares_ordenados.items():

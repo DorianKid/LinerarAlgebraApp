@@ -169,7 +169,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     
 def cuadricula_3D_interactiva(largo_cuadricula, pares_ordenados):
     # Crear la figura 3D
-    fig = go.Figure()
+    figura = go.Figure()
 
     # Dibujar las líneas de la cuadrícula
     for i in range(-largo_cuadricula, largo_cuadricula+1):
@@ -200,4 +200,4 @@ def cuadricula_3D_interactiva(largo_cuadricula, pares_ordenados):
         yaxis=dict(range=[-largo_cuadricula, largo_cuadricula], title='Y'),
         zaxis=dict(range=[-largo_cuadricula, largo_cuadricula], title='Z')
     ))
-
+    return figura

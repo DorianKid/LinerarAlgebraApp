@@ -72,7 +72,7 @@ if st.session_state.page == 'generate':
         col1, col2, col3 = st.columns([1, 2, 1])
             
         with col2:  # Usar la columna central para el contenido
-            st.pyplot(fig= figura_2D, use_container_width=Tr)
+            st.pyplot(fig= figura_2D, use_container_width=True)
     
         st.markdown('''
     ##### Sistema de Coordenadas Cartesianas (3-D)

@@ -139,6 +139,15 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
     ax.set_zticks(range(-largo_cuadricula, largo_cuadricula+1))
 
+    # Agregar las flechas 
+    # Flechas horizontales
+    ax.annotate("", xy=(largo_cuadricula + 0.55, 0), xytext=(largo_cuadricula + 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(-largo_cuadricula - 0.55, 0), xytext=(-largo_cuadricula - 0.4, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+
+    # Flechas verticales
+    ax.annotate("", xy=(0, largo_cuadricula + 0.55), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+    ax.annotate("", xy=(0, -largo_cuadricula - 0.55), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
+
     # Dibujar las líneas de la cuadrícula
     for i in range(-largo_cuadricula, largo_cuadricula+1):
         ax.plot([-largo_cuadricula, largo_cuadricula], [i, i], [0, 0], color='gray', linestyle=':', linewidth=0.5)

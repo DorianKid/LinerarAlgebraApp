@@ -158,6 +158,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     
     # Agregar puntos en las posiciones deseadas
     for letra, (x, y, z) in pares_ordenados.items():
+        ax.quiver(0, 0, 0, x, y, z, color='red', arrow_length_ratio=0.1)
         ax.scatter(x, y, z, color='green', s=50, zorder=3)
         ax.text(x, y, z, letra, fontsize=10)
     

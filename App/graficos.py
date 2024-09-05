@@ -144,11 +144,16 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
     
-  # Agregar flechas al final de cada eje
+    # Agregar flechas al final de cada eje
     arrow_props = dict(mutation_scale=20, arrowstyle='->', color='black', linewidth=2)
-    
     # Flecha para el eje X
     ax.annotate("", xy=(largo_cuadricula + 0.55, 0, 0), xytext=(largo_cuadricula + 0.4, 0, 0), arrowprops=arrow_props)
+    
+    # Flecha para el eje Y
+    ax.annotate("", xy=(0, largo_cuadricula + 0.55, 0), xytext=(0, largo_cuadricula + 0.4, 0), arrowprops=arrow_props)
+    
+    # Flecha para el eje Z
+    ax.annotate("", xy=(0, 0, largo_cuadricula + 0.55), xytext=(0, 0, largo_cuadricula + 0.4), arrowprops=arrow_props)
     
     # Agregar etiquetas de los ejes en las partes positivas
     ax.text(largo_cuadricula + 0.5, 0, 0, 'X', fontsize=12)

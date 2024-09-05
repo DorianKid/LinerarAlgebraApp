@@ -125,56 +125,46 @@ def cuadricula(largo_cuadricula, pares_ordenados):
 def cuadricula_3D(largo_cuadricula, pares_ordenados):
     # Configurar el tamaño de la figura
     figura = plt.figure(figsize=(largo_cuadricula*1.5, largo_cuadricula*1.5))
-
+    
     # Crear el lienzo 3D
     ax = figura.add_subplot(111, projection='3d')
-
+    
     # Configurar los límites de los ejes
     ax.set_xlim(-largo_cuadricula, largo_cuadricula)
     ax.set_ylim(-largo_cuadricula, largo_cuadricula)
     ax.set_zlim(-largo_cuadricula, largo_cuadricula)
-
+    
     # Establecer los ticks para que vayan de 1 en 1
     ax.set_xticks(range(-largo_cuadricula, largo_cuadricula+1))
     ax.set_yticks(range(-largo_cuadricula, largo_cuadricula+1))
     ax.set_zticks(range(-largo_cuadricula, largo_cuadricula+1))
-
+    
     # Dibujar las líneas de la cuadrícula
     for i in range(-largo_cuadricula, largo_cuadricula+1):
         ax.plot([-largo_cuadricula, largo_cuadricula], [i, i], [0, 0], color='gray', linestyle=':', linewidth=0.5)
         ax.plot([i, i], [-largo_cuadricula, largo_cuadricula], [0, 0], color='gray', linestyle=':', linewidth=0.5)
         ax.plot([i, i], [0, 0], [-largo_cuadricula, largo_cuadricula], color='gray', linestyle=':', linewidth=0.5)
-
-    # Agregar las flechas 
-    # Flechas horizontales
-    ax.annotate("", xyz=(largo_cuadricula + 0.55, 0, 0), xyztext=(largo_cuadricula + 0.4, 0, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xyz=(-largo_cuadricula - 0.55, 0, 0), xyztext=(-largo_cuadricula - 0.4, 0, 0), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-
-    # Flechas verticales
-    ax.annotate("", xy=(0, largo_cuadricula + 0.55), xytext=(0, largo_cuadricula + 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-    ax.annotate("", xy=(0, -largo_cuadricula - 0.55), xytext=(0, -largo_cuadricula - 0.4), arrowprops=dict(color='#0f0f0f', linewidth=3, headlength=10, headwidth=8))
-
-
-    # Dibujar los ejes principales
-    ax.plot([-largo_cuadricula, largo_cuadricula], [0, 0], [0, 0], color='black', linewidth=2)
-    ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
-    ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
-
-    # Agregar etiquetas de los ejes
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-
+    
+    # Dibujar los ejes principales con flechas
+    ax.quiver(0, 0, 0, largo_cuadricula, 0, 0, color='black', arrow_length_ratio=0.1)
+    ax.quiver(0, 0, 0, 0, largo_cuadricula, 0, color='black', arrow_length_ratio=0.1)
+    ax.quiver(0, 0, 0, 0, 0, largo_cuadricula, color='black', arrow_length_ratio=0.1)
+    
+    # Agregar etiquetas de los ejes en las partes positivas
+    ax.text(largo_cuadricula + 0.5, 0, 0, 'X', fontsize=12)
+    ax.text(0, largo_cuadricula + 0.5, 0, 'Y', fontsize=12)
+    ax.text(0, 0, largo_cuadricula + 0.5, 'Z', fontsize=12)
+    
     # Agregar puntos en las posiciones deseadas
     for letra, (x, y, z) in pares_ordenados.items():
         ax.scatter(x, y, z, color='green', s=50, zorder=3)
         ax.text(x, y, z, letra, fontsize=10)
-
+    
     # Ajustar la vista
     ax.view_init(elev=20, azim=45)
+    plt.tight_layout()
 
     plt.close()
-
     return figura
     
 def cuadricula_3D_interactiva(largo_cuadricula, pares_ordenados):

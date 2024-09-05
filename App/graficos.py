@@ -143,8 +143,6 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     ax.plot([-largo_cuadricula, largo_cuadricula], [0, 0], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [-largo_cuadricula, largo_cuadricula], [0, 0], color='black', linewidth=2)
     ax.plot([0, 0], [0, 0], [-largo_cuadricula, largo_cuadricula], color='black', linewidth=2)
-
-    
     
     # Dibujar los ejes principales con flechas
     ax.quiver(0, 0, 0, largo_cuadricula, 0, 0, color='black', arrow_length_ratio=0.1)
@@ -158,7 +156,7 @@ def cuadricula_3D(largo_cuadricula, pares_ordenados):
     
     # Agregar puntos en las posiciones deseadas
     for letra, (x, y, z) in pares_ordenados.items():
-        ax.quiver(0, 0, 0, x, y, z, color='red', arrow_length_ratio=0.5)
+        ax.quiver(0, 0, 0, x, y, z, color='red', arrow_length_ratio=0.05)
         ax.scatter(x, y, z, color='green', s=50, zorder=3)
         ax.text(x, y, z, letra, fontsize=10)
     

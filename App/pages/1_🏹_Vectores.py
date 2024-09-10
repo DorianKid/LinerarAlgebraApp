@@ -20,7 +20,7 @@ if 'page' not in st.session_state:
     
 if st.session_state.page == 'generate':
     st.title("Vectores")
-    st.header("Sistema de Coordenadas")
+    st.header("Sistemas de Coordenadas")
     with st.expander("Ver"):
     
         largo = 8
@@ -82,10 +82,8 @@ if st.session_state.page == 'generate':
     **Características principales**:
     * **Eje horizontal**: Comúnmente llamado eje de abscisas o eje $X$.
     * **Eje vertical**: Conocido como eje de ordenadas o eje $Y$.
-    * **Eje**
+    * **Eje altura**: Conocido como el eje perpendicular al plano $XY$ o eje $Z$.
     * **Coordenadas**: La posición de cualquier punto en el plano se puede describir mediante una tupla ordenada $(x, y, z)$.
-    
-    **Sólo son sinónimos en el espacio euclídeo*.
     ''')
 
         largo_3D = 5
@@ -107,21 +105,35 @@ if st.session_state.page == 'generate':
             
         with col2:  # Usar la columna central para el contenido
             st.pyplot(fig= figura_3D, use_container_width=True)
+
+        st.markdown('''
+    ##### Sistema de Coordenadas Polares (3-D)
+    Es un sistema de coordenadas bidimensional en el que cada punto del plano se determina por una distancia y un ángulo. 
+    De manera más precisa, como sistema de referencia se toma: 
     
-    st.subheader("Vector Renglón y Vector Columna")
-    st.markdown('''
+    a. Un punto *O* del plano, al que se llama origen o polo; 
+    b. Una recta dirigida (o rayo, o segmento *OL*) que pasa por *O*, llamada eje polar (equivalente al eje x del sistema cartesiano).
+    c. Todo punto *P* del plano corresponde a un par ordenado $(r, \\theta)$ donde $r$ es la distancia de *P* al origen y $\\theta$ es el ángulo formado entre el eje polar y la recta dirigida *OP*. 
+    d. El valor de $\\theta$ crece en sentido antihorario y decrece en sentido horario. 
+    e. La distancia $r (r \\geq \\theta)$ se conoce como la «coordenada radial» mientras que el ángulo es la «coordenada angular».
+    
+    ''')
+    
+    st.header("Vector Renglón y Vector Columna")
+    with st.expander("Ver"):
+        st.markdown('''
 **Definición**: Un :red[vector de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
 ''')
-    st.latex('''
+        st.latex('''
 \\begin{equation}
    (x_{0}, x_{1}, x_{2}, \\dots, x_{n})
 \\end{equation}
 ''')
 
-    st.markdown('''
+        st.markdown('''
 **Definición**: Un :red[vector columna de n componentes] se define como un conjunto ordenado de :red[n] números escritos de la siguiente manera:
 ''')
-    st.latex('''
+        st.latex('''
 \\begin{equation}
 \\begin{pmatrix}
    x_{0} \\\\

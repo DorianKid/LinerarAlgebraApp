@@ -3,7 +3,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import plotly.graph_objects as go
 import numpy as np
 
-def polares(largo, puntos_polares):
+def polares(largo, puntos_polares, radianes=True):
     # Configurar el tamaño de la figura
     figura = plt.figure(figsize=(largo*1.5, largo*1.5))
     
@@ -14,10 +14,23 @@ def polares(largo, puntos_polares):
     ax.set_ylim(0, largo)
     
     # Configurar las etiquetas de los ángulos en radianes
-    ax.set_xticks(np.linspace(0, 2*np.pi, 8, endpoint=False))
-    ax.set_xticklabels([r'$\; 0, 2\pi$', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$', r'$\frac{3\pi}{4}$', 
+    if radianes:
+        ax.set_xticks(np.linspace(0, 2*np.pi, 8, endpoint=False))
+        ax.set_xticklabels([r'$\; 0, 2\pi$', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$', r'$\frac{3\pi}{4}$', 
                         r'$\pi$', r'$\frac{5\pi}{4}$', r'$\frac{3\pi}{2}$', r'$\frac{7\pi}{4}$'], color="red")
-        
+        # Marcar el punto especificado
+        for (r, (numerador, denominador)) in puntos_polares:
+            ax.plot(numerador * np.pi / denominador, r, 'ko', markersize=6, zorder=3)
+            texto_latex = f'({r}, $\\pi/{denominador}$)' if numerador == 1 else f'({r}, $\\frac{{{numerador}\\pi}}{{{denominador}}}$)' if denominador != 1 else f'({r}, ${int(numerador/denominador)}\\pi$)' if numerador%denominador == 0 else f'({r}, ${numerador}\\pi$)'  
+            ax.text(numerador * np.pi / denominador, r, texto_latex, ha='right', va='bottom')
+    else: 
+        ax.set_xticks(np.linspace(0, 2*np.pi, 8, endpoint=False))
+        # Marcar el punto especificado
+        for (r, (numerador, denominador)) in puntos_polares:
+            ax.plot(numerador * np.pi / denominador, r, 'ko', markersize=6, zorder=3)
+            texto = f'({r}, {numerador*180/denominador:.2f}°)' if numerador*180%denominador != 0 else f'({r}, {numerador*180/denominador:.0f}°)'
+            ax.text(numerador * np.pi / denominador, r, texto, fontsize="small", ha='right', va='bottom')
+
     # Configurar las etiquetas radiales
     ax.set_yticklabels(range(1, largo+1), color="blue")
     
@@ -25,16 +38,9 @@ def polares(largo, puntos_polares):
     for angle in np.linspace(0, 2*np.pi, 8, endpoint=False):
         ax.plot([angle, angle], [0, largo], color='#C83C2C', linestyle='--', linewidth=1)
     
-    # Marcar el punto especificado
-    for (r, (numerador, denominador)) in puntos_polares:
-        ax.plot(numerador * np.pi / denominador, r, 'ko', markersize=6, zorder=3)
-        texto_latex = f'({r}, $\\pi/{denominador}$)' if numerador == 1 else f'({r}, $\\frac{{{numerador}\\pi}}{{{denominador}}}$)' if denominador != 1 else f'({r}, ${int(numerador/denominador)}\\pi$)' if numerador%denominador == 0 else f'({r}, ${numerador}\\pi$)'  
-        ax.text(numerador * np.pi / denominador, r, texto_latex, ha='right', va='bottom')
-    
     # Ajustar el diseño
     plt.close()
     return figura
-
 def recta(largo_recta, ubicaciones_puntos):
     # Configurar el tamaño de la figura
     figura = plt.figure(figsize=(largo_recta*1.5, 1.5))

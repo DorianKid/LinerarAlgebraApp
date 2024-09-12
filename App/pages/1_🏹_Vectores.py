@@ -125,7 +125,7 @@ if st.session_state.page == 'generate':
         figura_polar_360 = polares(largo_polar, puntos_polares, radianes=False)
         
             # Crear una columna central
-        col1, col2, col3 = st.columns([3, 1, 3])
+        col1, col2, col3 = st.columns([4, 1, 4])
             
         with col1:  # Usar la columna central para el contenido
             st.pyplot(fig= figura_polar, use_container_width=True)

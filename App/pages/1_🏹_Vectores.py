@@ -107,17 +107,15 @@ if st.session_state.page == 'generate':
             st.pyplot(fig= figura_3D, use_container_width=True)
 
         st.markdown('''
-    ##### Sistema de Coordenadas Polares (3-D)
+    ##### Sistema de Coordenadas Polares 
     Es un sistema de coordenadas bidimensional en el que cada punto del plano se determina por una distancia y un ángulo. 
     De manera más precisa, como sistema de referencia se toma: 
 
     Caracteristicas principales:
     * **Origen**: Un punto *O* del plano, al que se llama origen o polo; 
     * **Eje radial**: Una recta dirigida (o rayo, o segmento *OL*) que pasa por *O*, llamada eje polar (equivalente al eje x del sistema cartesiano).
-    * **Coordenadas**: Todo punto *P* del plano corresponde a un par ordenado $(r, \\theta)$ donde $r$ es la distancia de *P* al origen y $\\theta$ es el ángulo formado entre el eje polar y la recta dirigida *OP*. 
-    * **Crecimiento**: El valor de $\\theta$ crece en sentido antihorario y decrece en sentido horario. 
-    * **Eje angular**: La distancia $r (r \\geq \\theta)$ se conoce como la «coordenada radial» mientras que el ángulo es la «coordenada angular».
-    
+    * **Coordenadas**: Todo punto *P* del plano corresponde a un par ordenado $(r, \\theta)$ donde $r$ es la distancia de *P* al origen y $\\theta$ es el ángulo formado entre el eje polar y la recta dirigida *OP*. Se conoce a $r$ como la «coordenada radial» mientras que el ángulo es la «coordenada angular» 
+    * **Crecimiento**: El valor de $\\theta$ crece en sentido antihorario y decrece en sentido horario.     
     ''')
     
     st.header("Vector Renglón y Vector Columna")

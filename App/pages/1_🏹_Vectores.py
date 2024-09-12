@@ -122,12 +122,16 @@ if st.session_state.page == 'generate':
                 puntos_polares = [(random.randint(0, largo_polar), (random.randint(1, largo_polar*2), random.randint(1, largo_polar*2))) for _ in range(3)]  
                 
         figura_polar = polares(largo_polar, puntos_polares)
+        figura_polar_360 = polares(largo_polar, puntos_polares, radianes=False)
         
             # Crear una columna central
-        col1, col2, col3 = st.columns([1, 2, 1])
+        col1, col2, col3 = st.columns([3, 1, 3])
             
-        with col2:  # Usar la columna central para el contenido
+        with col1:  # Usar la columna central para el contenido
             st.pyplot(fig= figura_polar, use_container_width=True)
+
+        with col3:  # Usar la columna central para el contenido
+            st.pyplot(fig= figura_polar_360, use_container_width=True)
 
     
     st.header("Vector Renglón y Vector Columna")
